@@ -1,0 +1,20 @@
+li{
+  list-style:none;
+}
+.navbar{
+  display: flex;
+  flex-wrap: inherit;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(123, 124, 126);
+
+}
+.navbar-brand{
+  color:white;
+}
+.group{
+  display: flex;
+}
+body{
+  font-family: sans-serif;
+}

@@ -1,0 +1,25 @@
+<div>
+
+</div>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Producto</th>
+      <th scope="col">Fecha</th>
+      <th scope="col">Cantidad Entrada</th>
+      <th scope="col">Cantidad Salida</th>
+      <th scope="col">Total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of KardexGroup; index as i">
+      <th scope="row">{{i+1}}</th>
+      <td>{{product.product}}</td>
+      <td>{{product.date}}</td>
+      <td>{{product.amountEnter}}</td>
+      <td>{{product.amountExit}}</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>

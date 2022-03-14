@@ -1,0 +1,48 @@
+
+  <div *ngFor="let product of Products; index as index" class="container">
+    <div class="gallery">
+      <a target="_blank" [href]="product.image">
+        <img [src]="product.image" alt="Product Image" width="600" height="400">
+      </a>
+      <p>Marca:{{product.marca}}</p>
+      <p>Amount:{{product.amount}}</p>
+      <div class="price"><p>{{product.price}}$</p></div>
+      <button class="button" onclick="document.getElementById('id01').style.display='block'" (click)="buy(index)">Comprar</button>
+    </div>
+  </div>
+
+  <section class="buyContainer">
+    <title>W3.CSS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <body>
+    <div class="w3-container">
+      <div id="id01" class="w3-modal">
+        <div class="w3-modal-content">
+          <div class="w3-container">
+            <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+            <div *ngFor="let product of buyCarItems; index as index" class="container">
+              <div class="gallery">
+                <a target="_blank" [href]="product.image">
+                  <img [src]="product.image" alt="Cinque Terre" width="600" height="400">
+                </a>
+                <p>Marca:{{product.marca}}</p>
+              </div>
+            </div>
+            <p [(ngModel)]="totalPrice"></p>
+            <div class="buybutton">
+              <button class="button" (click)="buyCar()">Comprar</button>
+              <button class="button" onclick="document.getElementById('id01').style.display='none'">Seguir Comprando</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  </section>
+
+
+
+
+
+
